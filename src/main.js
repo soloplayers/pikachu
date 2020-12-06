@@ -28,7 +28,6 @@ const string = `
     transform: translateX(100px);
 }
 
-    /* 眼珠：相同的操作放在相同的类名eye上去除冗余的代码 */
     .eye::after{
     content: '';
     display: block;
@@ -98,12 +97,12 @@ const string = `
 
     .face.left{
     border: 3px solid black;
-    transform: translateX(-160px);
+    transform: translateX(-138px);
 }
 
     .face.right{
     border: 3px solid black;
-    transform: translateX(160px);
+    transform: translateX(138px);
 }
 
     .mouth {
@@ -122,7 +121,6 @@ const string = `
     border: 3px solid black;
     border-top-color: transparent;
     position: relative;
-    /* 很关键的一步，上嘴唇的背景色（黄色）来覆盖舌头的颜色 */
     background-color: #ffe600;
     z-index: 1;
 }
@@ -193,7 +191,7 @@ const string = `
 }`
 const player = {
     id: undefined,
-    setTime: 100,
+    setTime: 15,
     i: 1,
     ui: {
         demo1: document.querySelector('.demo1style'),
@@ -201,7 +199,7 @@ const player = {
     },
     init: () => {
         player.bindevets();
-        setTime = 30;
+        setTime = 15;
         i = 1;
         player.playStart();
     },
@@ -250,17 +248,17 @@ const player = {
     },
     slowevent:() => {
         player.ruintimer();
-        player.setTime = 50;
+        player.setTime = 30;
         player.playStart();
     },
     middleevent:() => {
         player.ruintimer();
-        player.setTime = 30;
+        player.setTime = 15;
         player.playStart();
     },
     fastevent:() => {
         player.ruintimer();
-        player.setTime = 10;
+        player.setTime = 5;
         player.playStart();
     },
 }
