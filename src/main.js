@@ -258,7 +258,7 @@ const player = {
     },
     fastevent:() => {
         player.ruintimer();
-        player.setTime = 5;
+        player.setTime = 0;
         player.playStart();
     },
 }
